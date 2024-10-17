@@ -13,12 +13,11 @@ while true
         WinWaitActive("Texas Football vs. Georgia | TexasSports.com")  ; Ensure the window is fully active
         Sleep(500)
         Click(1160, 590)  ; First click at (1160, 590) relative to the active window
-        
-        ; Wait for the new page to load
-        WinWaitActive("New Page Title")  ; Replace with part of the new page title
-        ; Once the new page is active, perform the next click
+        Sleep(250)
         Click(1160, 700)  ; Second click at (1160, 700) relative to the active window
-        Sleep(500)  ; Wait a bit before proceeding to ensure stability
+        ; Wait for the new page to load
+        WinWaitActive("Sorry - Google Chrome")  ; Replace with part of the new page title
+        ; Once the new page is active, perform the next click
     }
 
     ; Check for the Confirmation window
@@ -40,7 +39,7 @@ while true
         ; Wait for the page to load again after clicking retry
         WinWaitActive("Texas Football vs. Georgia | TexasSports.com")  ; Replace with part of the new page title
         ; Once it reloads, restart the process
-        Sleep(500)  ; Wait before retrying the process
+        Sleep(250)  ; Wait before retrying the process
     }
     else
     {
